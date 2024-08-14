@@ -1,39 +1,66 @@
-// simulador de compra para tienda de ropa proyecto final 
-let precioCamisas = 50;
-let precioPantalones = 80;
-let precioAbrigos = 120;
+// segunda preentrega tienda de ropa javascript arrays constructores, clases, funciones.
 
-function calcularSubtotal(producto, cantidad) {
-    let precio;
-    if (producto === "camisas") {
-        precio = precioCamisas;
-    } else if (producto === "pantalones") {
-        precio = precioPantalones;
-    } else if (producto === "abrigos") {
-        precio = precioAbrigos;
-    }
-    return precio * cantidad;
-}
-
-let totalCompra = 0;
-
-let productos = ["camisas", "pantalones", "abrigos"];
-let precios = [precioCamisas, precioPantalones, precioAbrigos];
-
-for (let i = 0; i < 3; i++) {
-    let producto;
-    if (i === 0) {
-        producto = "camisas";
-    } else if (i === 1) {
-        producto = "pantalones";
-    } else if (i === 2) {
-        producto = "abrigos";
+class Producto {
+    constructor(nombre, precio) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidad = 0;
     }
 
-    let cantidad = parseInt(prompt("Cuantas"  + producto + "deseas comprar"));
-    totalCompra += calcularSubtotal(producto, cantidad);
+    asignarCantidad(cantidad) {
+        this.cantidad = parseInt(cantidad);
+    }
+
+
+    calcularSubtotal() {
+        return this.precio * this.cantidad;
+    }
 }
 
 
-console.log("El total de tu compra es: $" + totalCompra);
+class Tienda {
+    constructor(productos) {
+        this.productos = productos;
+    }
 
+
+    recolectarCantidad() {
+        this.productos.forEach(producto => {
+            let cantidad = prompt("Cuantas " + producto.nombre + " deseas comprar");
+            producto.asignarCantidad(cantidad);
+        });
+    }
+
+
+    calcularTotalCompra() {
+        return this.productos.reduce((total, producto) => {
+            return total + producto.calcularSubtotal();
+        }, 0);
+    }
+
+
+    mostrarTotal() {
+        let totalCompra = this.calcularTotalCompra();
+        console.log("El total de tu compra es: $" + totalCompra);
+    }
+
+
+    listarProductos() {
+        this.productos.forEach(function(producto) {
+            console.log('Producto: ' + producto.nombre + ', Precio: ' + producto.precio);
+        });
+    }
+}
+
+
+let productos = [
+    new Producto("camisas", 50),
+    new Producto("pantalones", 80),
+    new Producto("abrigos", 120)
+];
+
+let miTienda = new Tienda(productos);
+
+miTienda.listarProductos(); 
+miTienda.recolectarCantidad(); 
+miTienda.mostrarTotal(); 
