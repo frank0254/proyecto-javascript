@@ -1,66 +1,41 @@
-// segunda preentrega tienda de ropa javascript arrays constructores, clases, funciones.
 
-class Producto {
-    constructor(nombre, precio) {
-        this.nombre = nombre;
-        this.precio = precio;
-        this.cantidad = 0;
-    }
+// Navegación navbar
+const header = document.querySelector('#header');
+const navegacion = document.createElement('div');
+const nav = document.createElement('nav');
+const ul = document.createElement('ul');
 
-    asignarCantidad(cantidad) {
-        this.cantidad = parseInt(cantidad);
-    }
-
-
-    calcularSubtotal() {
-        return this.precio * this.cantidad;
-    }
-}
-
-
-class Tienda {
-    constructor(productos) {
-        this.productos = productos;
-    }
-
-
-    recolectarCantidad() {
-        this.productos.forEach(producto => {
-            let cantidad = prompt("Cuantas " + producto.nombre + " deseas comprar");
-            producto.asignarCantidad(cantidad);
-        });
-    }
-
-
-    calcularTotalCompra() {
-        return this.productos.reduce((total, producto) => {
-            return total + producto.calcularSubtotal();
-        }, 0);
-    }
-
-
-    mostrarTotal() {
-        let totalCompra = this.calcularTotalCompra();
-        console.log("El total de tu compra es: $" + totalCompra);
-    }
-
-
-    listarProductos() {
-        this.productos.forEach(function(producto) {
-            console.log('Producto: ' + producto.nombre + ', Precio: ' + producto.precio);
-        });
-    }
-}
-
-
-let productos = [
-    new Producto("camisas", 50),
-    new Producto("pantalones", 80),
-    new Producto("abrigos", 120)
+const enlaces = [
+    { link: "index.html", nombre: "Inicio" },
+    { link: "productos.html", nombre: "Productos" },
+    { link: "contacto.html", nombre: "Contacto" }
 ];
 
-let miTienda = new Tienda(productos);
+// Añadir elementos al DOM
+header.appendChild(navegacion);
+navegacion.appendChild(nav);
+nav.appendChild(ul);
 
-miTienda.listarProductos(); 
-miTienda.recolectarCantidad(); 
-miTienda.mostrarTotal(); 
+// enlaces y añadirlos al ul
+enlaces.forEach(enlace => {
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    
+    a.href = enlace.link;
+    a.textContent = enlace.nombre;
+    
+    li.appendChild(a);
+    ul.appendChild(li);
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const botonMostrarMensaje = document.getElementById('mostrarMensaje');
+    const mensajeContenedor = document.getElementById('mensajeBienvenida');
+
+  
+    botonMostrarMensaje.addEventListener('click', () => {
+        mensajeContenedor.innerText = '¡Gracias por visitar nuestra tienda! Estamos aquí para ayudarte.';
+    });
+});

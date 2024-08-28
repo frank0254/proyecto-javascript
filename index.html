@@ -1,15 +1,79 @@
 <!DOCTYPE html>
-<html lang="en-AR"> 
+<html lang="es">
 <head>
-    <meta charset="UFT-8">
-    <meta name="viewport" content="width"=device-width, initial-scale="1.0">
-    <title>Proyecto Javascript</title>
-    <link rel="stylesheet" href="ccs/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Tienda de Ropa</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        nav {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        #mensajeBienvenida {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
-
-
+    <header>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Bienvenido a nuestra Tienda de Ropa</h1>
+        <p>Explora nuestros productos, realiza tus compras y contáctanos si necesitas ayuda.</p>
+        <section>
+            <h2>Sobre Nosotros</h2>
+            <p>Ofrecemos una amplia gama de ropa para todos los gustos y necesidades. Desde camisas hasta abrigos, tenemos todo lo que necesitas.</p>
+        </section>
+        <section>
+            <h2>Últimas Ofertas</h2>
+            <p>Visita nuestra sección de productos para conocer nuestras ofertas y descuentos especiales.</p>
+        </section>
+        <div id="mensajeBienvenida"></div>
+        <button id="mostrarMensaje">Mostrar Mensaje de Bienvenida</button>
+    </main>
+    <footer>
+        <p>&copy; 2024 Tienda de Ropa</p>
+    </footer>
     <script src="js/index.js"></script>
+    <script src="js/producto.js"></script>
+    <script src="js/contacto.js"></script>
 </body>
-</html>     
-
+</html>
