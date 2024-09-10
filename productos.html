@@ -1,46 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">                        
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos - Tienda de Ropa</title>
+    <!-- Enlace a Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a SweetAlert2 -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Navbar -->
     <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="productos.html">Productos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Tienda de Ropa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <!-- Menú de usuario -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img id="profilePic" src="img/default-profile.png" class="rounded-circle" width="30" height="30" alt="Perfil">
+                            <span id="userName">Usuario</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userMenu">
+                            <a class="dropdown-item" href="#" id="btnLogin">Iniciar Sesión</a>
+                            <a class="dropdown-item" href="#" id="btnRegister">Registrarse</a>
+                            <a class="dropdown-item" href="#" id="btnLogout" style="display: none;">Cerrar Sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <main>
+
+    <!-- Main Content -->
+    <main class="container mt-4">
         <h1>Nuestros Productos</h1>
-        <ul id="productos"></ul>
-        <div id="inputs"></div>
-        
-        <h2>Total de la Compra</h2>
-        <div id="resultado">El total de tu compra es: $0</div>
+        <div id="productos" class="row"></div>
 
-        <h2>Carrito de Compras</h2>
-        <button id="calcularTotal">Calcular Total</button>
-        <button id="vaciarCarrito">Vaciar Carrito</button>
+        <h2 class="mt-4">Carrito de Compras</h2>
+        <button id="vaciarCarrito" class="btn btn-danger mb-2">Vaciar Carrito</button>
 
-        <h2>Eliminar Producto</h2>
-        <select id="selectProducto"></select>
-        <button id="eliminarProducto">Eliminar Producto</button>
+        <h2 class="mt-4">Eliminar Producto</h2>
+        <select id="selectProducto" class="form-control mb-2"></select>
+        <button id="eliminarProducto" class="btn btn-warning">Eliminar Producto</button>
 
-        <h2>Lista del Carrito</h2>
-        <ul id="carrito"></ul>
-        <div id="totalCarrito">Total Carrito: $0</div>
+        <h2 class="mt-4">Lista del Carrito</h2>
+        <ul id="carrito" class="list-group mb-3"></ul>
+        <div id="totalCarrito" class="mt-2 mb-3">Total Carrito: $0</div>
+        <button id="comprarCarrito" class="btn btn-success">Comprar</button>
     </main>
-    <footer>
-        <p>&copy; 2024 Tienda de Ropa</p>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white p-3 text-center">
+        <p>&copy; 2024 Tienda de Ropa. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Vinculación del archivo JavaScript -->
+    <!-- Scripts de Bootstrap y SweetAlert2 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+    <!-- Script de JavaScript personalizado -->
     <script src="js/producto.js"></script>
+    <script src="js/login.js"></script>
+    
 </body>
 </html>

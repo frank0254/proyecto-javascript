@@ -2,78 +2,181 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Tienda de Ropa</title>
-    <link rel="stylesheet" href="css/styles.css"> 
-    <style>
-        
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        #mensajeBienvenida {
-            margin-top: 20px;
-            font-size: 18px;
-            color: #333;
-        }
-    </style>
+    <!-- Enlace a Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <!-- Navbar -->
     <header>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="productos.html">Productos</a>
-            <a href="contacto.html">Contacto</a>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Tienda de Ropa</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="productos.html">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html">Contacto</a>
+                    </li>
+                    <!-- Menú de usuario -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="userMenu" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <img id="profilePic" src="img/default-profile.png" class="rounded-circle" width="30" height="30" alt="Perfil">
+                            <span id="userName">Usuario</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userMenu">
+                            <a class="dropdown-item" href="#" id="btnLogin">Iniciar Sesión</a>
+                            <a class="dropdown-item" href="#" id="btnRegister">Registrarse</a>
+                            <a class="dropdown-item" href="#" id="btnLogout" style="display: none;">Cerrar Sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </header>
-    <main>
-        <h1>Bienvenido a nuestra Tienda de Ropa</h1>
-        <p>Explora nuestros productos, realiza tus compras y contáctanos si necesitas ayuda.</p>
-        <section>
-            <h2>Sobre Nosotros</h2>
-            <p>Ofrecemos una amplia gama de ropa para todos los gustos y necesidades. Desde camisas hasta abrigos, tenemos todo lo que necesitas.</p>
-        </section>
-        <section>
-            <h2>Últimas Ofertas</h2>
-            <p>Visita nuestra sección de productos para conocer nuestras ofertas y descuentos especiales.</p>
-        </section>
-        <div id="mensajeBienvenida"></div>
-        <button id="mostrarMensaje">Mostrar Mensaje de Bienvenida</button>
-    </main>
-    <footer>
-        <p>&copy; 2024 Tienda de Ropa</p>
+
+    <!-- Hero Section -->
+    <section class="jumbotron text-center bg-light mb-4">
+        <div class="container">
+            <h1 class="jumbotron-heading">Bienvenido a Tienda de Ropa</h1>
+            <p class="lead text-muted">Descubre las últimas tendencias en moda y encuentra el estilo perfecto para cada ocasión.</p>
+            <p>
+                <a href="productos.html" class="btn btn-primary my-2">Ver Productos</a>
+                <a href="contacto.html" class="btn btn-secondary my-2">Contáctanos</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="container mb-4">
+        <h2 class="text-center mb-4">Categorías Destacadas</h2>
+        <div class="row text-center">
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="img/camisas.jpg" class="card-img-top" alt="Camisas">
+                    <div class="card-body">
+                        <h5 class="card-title">Camisas</h5>
+                        <p class="card-text">Explora nuestra colección de camisas para todas las ocasiones.</p>
+                        <a href="productos.html" class="btn btn-outline-primary">Ver Camisas</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="img/pantalones.jpg" class="card-img-top" alt="Pantalones">
+                    <div class="card-body">
+                        <h5 class="card-title">Pantalones</h5>
+                        <p class="card-text">Encuentra los pantalones perfectos para tu estilo.</p>
+                        <a href="productos.html" class="btn btn-outline-primary">Ver Pantalones</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <img src="img/abrigos.jpg" class="card-img-top" alt="Abrigos">
+                    <div class="card-body">
+                        <h5 class="card-title">Abrigos</h5>
+                        <p class="card-text">Mantente abrigado con nuestros elegantes abrigos.</p>
+                        <a href="productos.html" class="btn btn-outline-primary">Ver Abrigos</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="container mb-4">
+        <h2 class="text-center mb-4">Productos Destacados</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <img src="img/producto1.jpg" class="card-img-top" alt="Producto 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 1</h5>
+                        <p class="card-text">$50.00</p>
+                        <a href="productos.html" class="btn btn-primary">Comprar Ahora</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <img src="img/producto2.jpg" class="card-img-top" alt="Producto 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 2</h5>
+                        <p class="card-text">$80.00</p>
+                        <a href="productos.html" class="btn btn-primary">Comprar Ahora</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <img src="img/producto3.jpg" class="card-img-top" alt="Producto 3">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 3</h5>
+                        <p class="card-text">$120.00</p>
+                        <a href="productos.html" class="btn btn-primary">Comprar Ahora</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card mb-4 shadow-sm">
+                    <img src="img/producto4.jpg" class="card-img-top" alt="Producto 4">
+                    <div class="card-body">
+                        <h5 class="card-title">Producto 4</h5>
+                        <p class="card-text">$60.00</p>
+                        <a href="productos.html" class="btn btn-primary">Comprar Ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions Section -->
+    <section class="container mb-4">
+        <h2 class="text-center mb-4">Ofertas y Promociones</h2>
+        <div class="row text-center">
+            <div class="col-md-6">
+                <div class="bg-primary text-white p-4 mb-4 rounded">
+                    <h3>50% de descuento en la segunda prenda</h3>
+                    <p>Aprovecha esta oferta en todas nuestras camisas y pantalones.</p>
+                    <a href="productos.html" class="btn btn-light">Ver Ofertas</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="bg-success text-white p-4 mb-4 rounded">
+                    <h3>Envío Gratis en Compras Superiores a $100</h3>
+                    <p>Compra ahora y recibe tu pedido sin costo de envío.</p>
+                    <a href="productos.html" class="btn btn-light">Comprar Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white p-3 text-center">
+        <p>&copy; 2024 Tienda de Ropa. Todos los derechos reservados.</p>
     </footer>
-    <script src="js/index.js"></script>
-    <script src="js/producto.js"></script>
+
+    <!-- Scripts de Bootstrap y SweetAlert2 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+    <!-- Script de JavaScript personalizado -->
+    <script src="js/login.js"></script>
     <script src="js/contacto.js"></script>
+    <script src="js/producto.js"></script>
 </body>
 </html>
+

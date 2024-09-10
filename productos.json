@@ -1,0 +1,107 @@
+[
+    {
+        "id": "1",
+        "title": "Abrigo de Lana Gris",
+        "description": "Elegante abrigo de lana gris, perfecto para mantener el calor durante los meses fríos.",
+        "price": 119.99,
+        "image": ""
+    },
+    {
+        "id": "2",
+        "title": "Abrigo de Plumas Negro",
+        "description": "Abrigo de plumas negro con cierre frontal, ideal para el invierno.",
+        "price": 139.99,
+        "image": ""
+    },
+    {
+        "id": "3",
+        "title": "Abrigo Trench Beige",
+        "description": "Abrigo trench beige con cinturón y detalles clásicos para un look sofisticado.",
+        "price": 89.99,
+        "image": ""
+    },
+    {
+        "id": "4",
+        "title": "Abrigo de Lana Azul Marino",
+        "description": "Abrigo de lana azul marino, versátil y elegante, adecuado para cualquier ocasión.",
+        "price": 109.99,
+        "image": ""
+    },
+    {
+        "id": "5",
+        "title": "Abrigo de Cuero Marrón",
+        "description": "Abrigo de cuero marrón con estilo vintage, ideal para un look urbano.",
+        "price": 159.99,
+        "image": ""
+    },
+    {
+        "id": "6",
+        "title": "Camisa de Cuadros Roja",
+        "description": "Camisa de cuadros roja con tejido de algodón suave, perfecta para un estilo casual.",
+        "price": 34.99,
+        "image": ""
+    },
+    {
+        "id": "7",
+        "title": "Camisa de Lino Blanca",
+        "description": "Camisa de lino blanca fresca y ligera, ideal para el verano.",
+        "price": 29.99,
+        "image": ""
+    },
+    {
+        "id": "8",
+        "title": "Camisa de Rayas Azul",
+        "description": "Camisa de rayas azul con corte ajustado, elegante para el trabajo o eventos.",
+        "price": 39.99,
+        "image": ""
+    },
+    {
+        "id": "9",
+        "title": "Camisa de Manga Larga Negra",
+        "description": "Camisa de manga larga negra, básica pero esencial para cualquier guardarropa.",
+        "price": 44.99,
+        "image": ""
+    },
+    {
+        "id": "10",
+        "title": "Camisa de Denim",
+        "description": "Camisa de denim azul, un clásico que nunca pasa de moda.",
+        "price": 49.99,
+        "image": ""
+    },
+    {
+        "id": "11",
+        "title": "Pantalones Chinos Beige",
+        "description": "Pantalones chinos beige con ajuste cómodo, ideales para el día a día.",
+        "price": 54.99,
+        "image": ""
+    },
+    {
+        "id": "12",
+        "title": "Pantalones de Mezclilla Azul",
+        "description": "Pantalones de mezclilla azul con ajuste clásico, imprescindibles en cualquier guardarropa.",
+        "price": 49.99,
+        "image": ""
+    },
+    {
+        "id": "13",
+        "title": "Pantalones Cortos de Algodón",
+        "description": "Pantalones cortos de algodón, cómodos para los días calurosos.",
+        "price": 39.99,
+        "image": ""
+    },
+    {
+        "id": "14",
+        "title": "Pantalones de Lino Beige",
+        "description": "Pantalones de lino beige ligeros y elegantes, perfectos para climas cálidos.",
+        "price": 59.99,
+        "image": ""
+    },
+    {
+        "id": "15",
+        "title": "Pantalones de Tela Gris",
+        "description": "Pantalones de tela gris con ajuste cómodo, ideales para un look relajado.",
+        "price": 64.99,
+        "image": ""
+    }
+]
