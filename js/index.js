@@ -39,3 +39,4 @@ document.addEventListener('DOMContentLoaded', () => {
         mensajeContenedor.innerText = '¡Gracias por visitar nuestra tienda! Estamos aquí para ayudarte.';
     });
 });
+
