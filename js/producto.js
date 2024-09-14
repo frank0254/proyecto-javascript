@@ -64,7 +64,7 @@ const mostrarCarrito = () => {
         totalCarrito += item.precio;
     });
 
-    // Cálculo del IVA (asumiendo un IVA del 21%)
+    // Cálculo del IVA 
     const IVA = 0.21;
     const totalConIVA = totalCarrito * (1 + IVA);
 
@@ -90,7 +90,7 @@ const eliminarProducto = () => {
     }
 };
 
-// Vincular el evento al botón de eliminar producto
+// Vincular  botón de eliminar producto
 document.getElementById('eliminarProducto').addEventListener('click', () => {
     eliminarProducto();
 });

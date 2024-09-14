@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const userName = document.getElementById('userName');
     const profilePic = document.getElementById('profilePic');
 
-    // Función para actualizar la UI del usuario
+   
     const updateUI = (username, profilePicUrl) => {
         userName.textContent = `Bienvenido, ${username}`;
         profilePic.src = profilePicUrl;
@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
         btnLogout.style.display = 'block';
     };
 
-    // Manejar el evento de clic para Iniciar Sesión
     btnLogin.addEventListener('click', () => {
         Swal.fire({
             title: 'Iniciar Sesión',
@@ -28,24 +27,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 const password = Swal.getPopup().querySelector('#loginPassword').value;
                 if (!email || !password) {
                     Swal.showValidationMessage('Por favor, ingrese el correo electrónico y la contraseña');
-                    return false;  // Evita el cierre del modal si la validación falla
+                    return false;  
                 }
-                // Aquí puedes añadir lógica para autenticar al usuario
-                // Ejemplo simple:
+                
                 if (email === 'test@example.com' && password === 'password') {
-                    const profilePicUrl = 'img/user-profile.png'; // Imagen de perfil del usuario
-                    const username = 'Fran'; // Aquí puedes definir el nombre de usuario si es fijo
+                    const profilePicUrl = 'img/user-profile.png'; 
+                    const username = 'Fran'; 
                     localStorage.setItem('user', JSON.stringify({ username, profilePic: profilePicUrl }));
                     updateUI(username, profilePicUrl);
-                    return true;  // Permite el cierre del modal si la autenticación es exitosa
+                    return true;  
                 }
-                Swal.showValidationMessage('Credenciales incorrectas'); // Mensaje de error si las credenciales son incorrectas
+                Swal.showValidationMessage('Credenciales incorrectas'); 
                 return false;
             }
         });
     });
 
-    // Manejar el evento de clic para Registrarse
+   
     btnRegister.addEventListener('click', () => {
         Swal.fire({
             title: 'Registrarse',
@@ -64,21 +62,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 if (!name || !email || !password || !profilePicFile) {
                     Swal.showValidationMessage('Por favor, complete todos los campos');
-                    return false;  // Evita el cierre del modal si la validación falla
+                    return false;  
                 }
                 
-                // Crear una URL de objeto para la imagen cargada
+                
                 const profilePicUrl = URL.createObjectURL(profilePicFile);
                 
-                // Guardar los datos en localStorage
+                
                 localStorage.setItem('user', JSON.stringify({ username: name, profilePic: profilePicUrl }));
                 updateUI(name, profilePicUrl);
-                return true;  // Permite el cierre del modal si el registro es exitoso
+                return true;  
             }
         });
     });
 
-    // Manejar el evento de clic para Cerrar Sesión
+    
     btnLogout.addEventListener('click', () => {
         Swal.fire({
             title: '¿Está seguro?',
@@ -96,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Inicializar la UI si el usuario ya está logueado
+    
     const user = JSON.parse(localStorage.getItem('user'));
     if (user) {
         updateUI(user.username, user.profilePic);

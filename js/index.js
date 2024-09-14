@@ -1,4 +1,3 @@
-
 // Navegación navbar
 const header = document.querySelector('#header');
 const navegacion = document.createElement('div');
@@ -39,4 +38,3 @@ document.addEventListener('DOMContentLoaded', () => {
         mensajeContenedor.innerText = '¡Gracias por visitar nuestra tienda! Estamos aquí para ayudarte.';
     });
 });
-

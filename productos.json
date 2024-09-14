@@ -1,107 +1,115 @@
 [
     {
         "id": "1",
-        "title": "Abrigo de Lana Gris",
-        "description": "Elegante abrigo de lana gris, perfecto para mantener el calor durante los meses fríos.",
+        "title": "Buzo de Lana Negro y Blanco",
+        "description": "buzo oversize de lana negro con blanco, perfecto para mantener el calor durante los meses fríos.",
         "price": 119.99,
         "image": "img/buzo negro.jpeg"
     },
     {
         "id": "2",
-        "title": "Abrigo de Plumas Negro",
-        "description": "Abrigo de plumas negro con cierre frontal, ideal para el invierno.",
+        "title": "Buzo Blanco ",
+        "description": "buzo oversize blanco con negro, ideal para el invierno.",
         "price": 139.99,
         "image": "img/buzo blanco.jpeg"
     },
     {
         "id": "3",
-        "title": "Abrigo Trench Beige",
-        "description": "Abrigo trench beige con cinturón y detalles clásicos para un look sofisticado.",
+        "title": "Buzo Beige",
+        "description": "buzo oversize de color beige con estampado, clasico para un cambio de look.",
         "price": 89.99,
         "image": "img/buzo beige.jpeg"
     },
     {
         "id": "4",
-        "title": "Abrigo de Lana Azul Marino",
-        "description": "Abrigo de lana azul marino, versátil y elegante, adecuado para cualquier ocasión.",
+        "title": "Buzo Azul Marino",
+        "description": "buzo oversize  bicolor con estampado de lana, versátil y adecuado para cualquier ocasión.",
         "price": 109.99,
         "image": "img/buzo azul.jpeg"
     },
     {
         "id": "5",
-        "title": "Abrigo de Cuero Marrón",
-        "description": "Abrigo de cuero marrón con estilo vintage, ideal para un look urbano.",
+        "title": "Buzo Tricolor",
+        "description": "buzo oversize tricolor con estamapado, ideal para un look urbano.",
         "price": 159.99,
         "image": "img/buzo verde.jpeg"
     },
     {
         "id": "6",
-        "title": "Camisa de Cuadros Roja",
-        "description": "Camisa de cuadros roja con tejido de algodón suave, perfecta para un estilo casual.",
+        "title": "Remera Oversize Negra",
+        "description": "Remera oversize de lana color negra con estampado",
         "price": 34.99,
         "image": "img/camisa oversize negra.jpeg"
     },
     {
         "id": "7",
-        "title": "Camisa de Lino Blanca",
-        "description": "Camisa de lino blanca fresca y ligera, ideal para el verano.",
+        "title": "Remera Oversize Blanca",
+        "description": "Remera oversize de lana color blanca con estampado, ideal para el verano.",
         "price": 29.99,
         "image": "img/camisa oversize blanca con estampado.jpeg"
     },
     {
         "id": "8",
-        "title": "Camisa de Rayas Azul",
-        "description": "Camisa de rayas azul con corte ajustado, elegante para el trabajo o eventos.",
+        "title": "Remera Oversize beige claro",
+        "description": "Remera oversize de lana color beige claro con estampado, ideal para un look urbano",
         "price": 39.99,
         "image": "img/camisa oversize beige.jpeg"
     },
     {
         "id": "9",
-        "title": "Camisa de Manga Larga Negra",
-        "description": "Camisa de manga larga negra, básica pero esencial para cualquier guardarropa.",
+        "title": "Remera Oversize Azul",
+        "description": "Remera oversize de lana color azul pastel  con estampado",
         "price": 44.99,
         "image": "img/camisa oversize azul cielo.jpeg"
     },
     {
         "id": "10",
-        "title": "Camisa de Denim",
-        "description": "Camisa de denim azul, un clásico que nunca pasa de moda.",
+        "title": "Remera Oversize verde",
+        "description": "Remera oversize de lana color verde con estampado, ideal para el verano.",
         "price": 49.99,
         "image": "img/camisa oversize verde pastel.jpeg"
     },
     {
         "id": "11",
-        "title": "Pantalones Chinos Beige",
-        "description": "Pantalones chinos beige con ajuste cómodo, ideales para el día a día.",
+        "title": "Pantalon Oversize Jean Gris",
+        "description": "Pantalon Oversize de Jean Gris cómodo, ideales para el día a día.",
         "price": 54.99,
         "image": "img/pantalon negro.jpeg"
     },
     {
         "id": "12",
-        "title": "Pantalones de Mezclilla Azul",
-        "description": "Pantalones de mezclilla azul con ajuste clásico, imprescindibles en cualquier guardarropa.",
+        "title": "Pantalon Oversize Jean verde claro",
+        "description": "Pantalon Oversize de Jean color verde claro, imprescindibles en cualquier guardarropa.",
         "price": 49.99,
         "image": "img/pantalon jean muy claro.jpeg"
     },
     {
         "id": "13",
-        "title": "Pantalones Cortos de Algodón",
-        "description": "Pantalones cortos de algodón, cómodos para los días calurosos.",
+        "title": "Jogger Beige",
+        "description": "jogger beige, ideal para el verano. ",
         "price": 39.99,
         "image": "img/mono beige.jpeg"
     },
     {
         "id": "14",
-        "title": "Pantalones de Lino Beige",
-        "description": "Pantalones de lino beige ligeros y elegantes, perfectos para climas cálidos.",
+        "title": "Jogger azul ",
+        "description": "Jogger de color azul , perfectos para look urbanos.",
         "price": 59.99,
         "image": "img/mano azul cielo.jpeg"
     },
     {
         "id": "15",
-        "title": "Pantalones de Tela Gris",
-        "description": "Pantalones de tela gris con ajuste cómodo, ideales para un look relajado.",
+        "title": "Pantalon oversize jean",
+        "description": "Pantalon oversize de jean , ideales los dias calurosos",
         "price": 64.99,
         "image": "img/pantalon jean azul.jpeg"
+    },
+
+    {
+        "id": "16",
+        "title": "Jogger verde ",
+        "description": "Jogger de color ver , perfectos para look urbanos.",
+        "price": 59.99,
+        "image": "img/jogger verde.jpeg"
     }
 ]
